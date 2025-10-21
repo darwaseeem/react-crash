@@ -1,5 +1,6 @@
 import React, { Activity } from 'react';
 import Form from './form';
+import Todo from './components/todoo';
 
 function App() {
   const [showForm, setShowForm] = React.useState(true);
@@ -13,6 +14,8 @@ function App() {
       <Activity mode={showForm ? 'visible' : 'hidden'}>
         <Form />
       </Activity>
+      <Todo />
+ 
     </div>
   );
 }

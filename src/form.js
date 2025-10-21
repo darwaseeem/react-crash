@@ -8,10 +8,15 @@ function Form() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    setForm({...form, [name]: value})
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(form);
+   setForm({ name: '', email: ''})
+  };
+  const handleClick = (e) => {
     e.preventDefault();
     console.log(form);
   };
@@ -34,7 +39,7 @@ function Form() {
           onChange={handleChange}
           placeholder="Email"
         />
-        <button type="submit">Submit</button>
+        <button type="submit" onClick={handleClick}>Submit</button>
       </form>
     </>
   );
