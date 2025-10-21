@@ -1,6 +1,7 @@
 import React, { Activity } from 'react';
 import Form from './form';
 import Todo from './components/todoo';
+import Tabledata from './components/tabledata';
 
 function App() {
   const [showForm, setShowForm] = React.useState(true);
@@ -15,6 +16,7 @@ function App() {
         <Form />
       </Activity>
       <Todo />
+      <Tabledata />
  
     </div>
   );
